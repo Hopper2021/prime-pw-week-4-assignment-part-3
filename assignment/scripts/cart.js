@@ -59,3 +59,13 @@ function isFull() {
  console.log( 'Adding pineapple (expects false):', addItem('pineapple') );
 listItems();
 console.log( 'Is basket full? (expects true):', isFull() );
+
+function removeItem( basket, item ) {
+  for ( let i=0; i<basket.length; i+=1 ){
+    if ( basket.indexOf[item] === basket[i] ) {
+      let removedItem = basket.splice( 2, 1, item );
+      return removedItem;
+    } return null;
+  }
+}
+console.log( 'Removing lettuce (expects lettuce):', removeItem( 'lettuce') );

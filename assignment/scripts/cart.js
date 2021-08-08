@@ -15,11 +15,22 @@ console.log('***** Cart Functions *****');
    return false;
  }
 
-// console.log( addItem( 'bananas' ), basket );
-// tested adding an item, then logged the array to show the item.
+console.log( `Basket contains: ${basket}` );
+console.log( 'Adding bananas (expect true):', addItem( 'bananas' ) );
+console.log( `Basket now contains: ${basket}` );
 
 function listItems () {
-  for (let i=0; i<basket.length; i+=1 ){
-
+  for ( let i=0; i<basket.length; i+=1 ) {
+    console.log( basket[i] );
   }
 }
+
+console.log( listItems() );
+
+function empty () {
+  basket.pop( basket );
+}
+
+console.log( `My basket contains: ${basket}` );
+console.log( `Emptying my basket`, empty() );
+console.log( `My basket now contains: ${basket}` );

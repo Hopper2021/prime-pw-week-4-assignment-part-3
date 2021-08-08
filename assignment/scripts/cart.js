@@ -30,10 +30,11 @@ console.log( listItems() );
 
 function empty() {
   basket.pop( basket );
+  return true;
 }
 
 console.log( `My basket contains: ${basket}` );
-console.log( `Emptying my basket`, empty() );
+console.log( 'Emptying my basket (expect true)', empty() );
 console.log( `My basket now contains: ${basket}` );
 
 // STRETCH Goals
@@ -46,3 +47,4 @@ function isFull() {
   }
 }
  console.log( isFull() );
+ console.log( addItem('carrots'), listItems() );

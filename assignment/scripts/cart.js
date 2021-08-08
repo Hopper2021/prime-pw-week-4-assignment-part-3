@@ -34,9 +34,9 @@ function empty() {
   return true;
 }
 
-console.log( `My basket contains: ${basket}` );
-console.log( 'Emptying my basket (expect true)', empty() );
-console.log( `My basket now contains: ${basket}` );
+console.log( `Basket contains: ${basket}` );
+console.log( 'Emptying basket (expect true)', empty() );
+console.log( `Basket now contains: ${basket}` );
 
 // STRETCH Goals
 
@@ -47,9 +47,9 @@ function isFull() {
     return true;
   }
 }
- console.log( 'Is my basket full? (expects false)', isFull() );
+ console.log( 'Is basket full? (expects false)', isFull() );
  console.log( 'Adding carrots (expects true):', addItem('carrots') );
- console.log( 'What items do I have in my basket?' );
+ console.log( 'What items do I have in basket?' );
  listItems();
 
  console.log( 'Adding potatoes (expects true):', addItem('potatoes') );
@@ -58,4 +58,4 @@ function isFull() {
  console.log( 'Adding strawberries (expects true):', addItem('strawberries') );
  console.log( 'Adding pineapple (expects false):', addItem('pineapple') );
 listItems();
-console.log( 'Is my basket full? (expects true):', isFull() );
+console.log( 'Is basket full? (expects true):', isFull() );

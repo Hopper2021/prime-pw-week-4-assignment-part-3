@@ -9,11 +9,12 @@ console.log('***** Cart Functions *****');
  const maxItems = 5;
 
  function addItem( item ) {
-   basket.push( item );
-   if ( item ) {
+   if ( basket.length < maxItems ) {
+     basket.push( item );
      return true;
+   } else if ( basket.length >= maxItems ) {
+     return false;
    }
-   return false;
  }
 
 console.log( `Basket contains: ${basket}` );
@@ -46,13 +47,15 @@ function isFull() {
     return true;
   }
 }
- console.log( 'Is my basket full?', isFull() );
+ console.log( 'Is my basket full? (expects false)', isFull() );
  console.log( 'Adding carrots (expects true):', addItem('carrots') );
  console.log( 'What items do I have in my basket?' );
  listItems();
 
- console.log( addItem('potatoes') );
- console.log( addItem('broccoli') );
- console.log( addItem('lettuce') );
- console.log( addItem('strawberries') );
+ console.log( 'Adding potatoes (expects true):', addItem('potatoes') );
+ console.log( 'Adding broccoli (expects true):', addItem('broccoli') );
+ console.log( 'Adding lettuce (expects true):', addItem('lettuce') );
+ console.log( 'Adding strawberries (expects true):', addItem('strawberries') );
+ console.log( 'Adding pineapple (expects false):', addItem('pineapple') );
 listItems();
+console.log( 'Is my basket full? (expects true):', isFull() );

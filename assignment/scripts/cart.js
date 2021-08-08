@@ -22,11 +22,11 @@ console.log( `Basket now contains: ${basket}` );
 
 function listItems() {
   for ( let i=0; i<basket.length; i+=1 ) {
-    console.log( basket[i] );
+      console.log( basket[i] );
   }
 }
 
-console.log( listItems() );
+// listItems(); // tested function
 
 function empty() {
   basket.pop( basket );
@@ -46,5 +46,13 @@ function isFull() {
     return true;
   }
 }
- console.log( isFull() );
- console.log( addItem('carrots'), listItems() );
+ console.log( 'Is my basket full?', isFull() );
+ console.log( 'Adding carrots (expects true):', addItem('carrots') );
+ console.log( 'What items do I have in my basket?' );
+ listItems();
+
+ console.log( addItem('potatoes') );
+ console.log( addItem('broccoli') );
+ console.log( addItem('lettuce') );
+ console.log( addItem('strawberries') );
+listItems();
